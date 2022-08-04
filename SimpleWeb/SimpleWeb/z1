@@ -1,0 +1,15 @@
+CREATE TABLE books.books
+(
+    id integer NOT NULL,
+    name character(250) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "BOOKS_pkey" PRIMARY KEY (id)
+)
+WITH (
+	OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE books.books
+    OWNER to postgres;
+    
+select * from books.books;
